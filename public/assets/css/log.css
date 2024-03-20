@@ -9,7 +9,63 @@
 
 body,
 input {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
+}
+
+.navbar {
+  background-color: #020B17;
+  color: #fff;
+  padding: 0px 20px;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-logo {
+  margin-right: auto;
+}
+
+.navbar-logo img {
+  height: 100px;
+}
+
+a.index {
+  text-decoration: none; 
+  color: white;
+  font-size: 700;
+    color: #9c9c9c;
+    transition: 0.5s ease-in-out; 
+  padding-right: 150px;
+  text-decoration: none; 
+  transition: color 0.3s, font-size 0.3s; 
+}
+
+a.index:hover {
+  text-decoration: none; 
+    font-size: 1.1em; 
+    color: #ffffff;
+    opacity: 1;
+}
+
+
+  .navbar-toggle.active .bar:nth-child(1) {
+      transform: translateY(6px) rotate(45deg);
+  }
+
+  .navbar-toggle.active .bar:nth-child(2) {
+      opacity: 0;
+  }
+
+  .navbar-toggle.active .bar:nth-child(3) {
+      transform: translateY(-6px) rotate(-45deg);
+  }
+
+
+.content {
+  padding: 20px;
 }
 
 .container {
@@ -169,7 +225,7 @@ form.sign-in-form {
   top: -10%;
   right: 48%;
   transform: translateY(-50%);
-  background-image: linear-gradient(-45deg, #1d2839 0%, #1d2839 100%);
+  background-image: linear-gradient(-45deg, #041023 0%, #04befe 100%);
   transition: 1.8s ease-in-out;
   border-radius: 50%;
   z-index: 6;
@@ -213,7 +269,7 @@ form.sign-in-form {
 }
 
 .panel p {
-  font-size: 1.5rem;
+  font-size: 0.95rem;
   padding: 0.7rem 0;
 }
 
@@ -265,6 +321,46 @@ form.sign-in-form {
 
 .container.sign-up-mode .left-panel {
   pointer-events: none;
+}
+
+/*footer log */
+
+.pie-pagina{
+  width: 100%;
+  background-color: #0a141d;
+}
+.pie-pagina .grupo-1{
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap:50px;
+  padding: 45px 0px;
+}
+
+.pie-pagina .grupo-1 .box figure img{
+  width: 100px;
+}
+
+.pie-pagina .grupo-1 .box p{
+  color: #efefef;
+  margin-bottom: 10px;
+}
+
+.pie-pagina .grupo-1 .red-social a:hover{
+  color: aqua;
+}
+
+
+
+@media screen and (max-width:800px){
+  .pie-pagina .grupo-1{
+      width: 90%;
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap:30px;
+      padding: 35px 0px;
+  }
 }
 
 .container.sign-up-mode .right-panel {
@@ -398,4 +494,13 @@ form.sign-in-form {
     bottom: 28%;
     left: 50%;
   }
+
+  @media screen and (max-width:800px){
+    .pie-pagina .grupo-1{
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap:30px;
+        padding: 35px 0px;
+    }
+}
 }

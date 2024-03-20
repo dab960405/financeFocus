@@ -6,6 +6,7 @@
 
 .body1{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     background-color: #888888;
     background-color: #01060c; 
@@ -16,7 +17,7 @@
 
 
 .content1{
-    margin-top: 264px;
+    
     width: 710px;
     margin-left: 10px;
  
@@ -41,15 +42,6 @@
     margin-top: 20px;
 }
 
-.content-links{
-    display: flex;
-    margin-top: 40px;
-    margin-left: 400px;
-}
-
-.content-links a{
-    text-decoration: none;
-}
 
 .content2{
     margin-top: 114px;
@@ -65,6 +57,7 @@
     display: flex;
     flex-direction: column;
     text-align: center;
+    padding-bottom: 100px;
 }
 
 .title2{
@@ -80,6 +73,7 @@
 
 .cards{
     display: flex;
+    flex-wrap: wrap;
     margin-top: 40px;
     padding-bottom: 150px;
     
@@ -115,75 +109,20 @@
     
 }
 
-footer {
-    background-color: #333; /* Color de fondo del footer */
-    color: #fff; /* Color del texto del footer */
-    padding: 20px; /* Espaciado interno del footer */
-  }
-  
-  .footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .footer-logo img {
-    width: 100px; /* Ajusta el tamaño del logo según sea necesario */
-    height: auto;
-  }
-  
-  .footer-links ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-  }
-  
-  .footer-links li {
-    margin-right: 20px;
-  }
-  
-  .footer-contact p {
-    margin: 0;
-  }
-  
-  .footer-copyright {
-    margin-top: 20px;
-    font-size: 12px; /* Tamaño del texto de derechos de autor */
-  }
 
-.social-media a:hover {
-    transform: scale(1.2);
+  @media screen and (max-height:926px) {
+
+    .body1{
+      justify-content: center;
+      align-items: center;
+    }
+
+    .title2, .cards{
+      justify-content: center;
+      align-items: center;
+    }
+
+    .content1{
+      margin-top: 150px;
+    }
   }
-
-.sponsor{
-    color: #888888;
-    
-}
-
-.footer-links{
-    min-width: 700px;
-    display: flex;
-    justify-content: space-around;
-  }
-
-  .footer-links a {
-    text-decoration: none;
-    font-size: 28px;
-    margin: 15px;
-    width: 60px;
-    height: 60px;
-    line-height: 60px;
-    text-align: center;
-    background: #314652;
-    color: #f1f1f1;
-    border-radius: 50%;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
-    transition: all .4s ease-in-out;
-  }
-
-  .footer-links a:hover {
-    transform: scale(1.2);
-  }
-
-  

@@ -11,19 +11,34 @@
     <title>Document</title>
 </head>
 <body>
-    <nav class="navbar">
+    <header class="header">
         <div class="logo">
-            <a href="#">
-                <img src="/public/assets/img/logo.png" width="150px" alt="Logo sitio web">
-            </a>
+            <img src="/public/assets/img/logo.png" alt="Logo de la marca">
         </div>
-            <ul class="nav-links">
+        <nav>
+           <ul class="nav-links">
                 <li><a href="/views/index.html">Inicio</a></li>
-        <li><a href="/views/aboutUs.html">Nosotros</a></li>
-        <li><a id="register" href="/views/login.html">Registrate</a></li>
-        <li><a id="login" href="/views/login.html">Inicio de sesión</a></li>
-             </ul>
-    </nav>
+                <li><a href="/views/aboutUs.html">Nosotros</a></li>+
+                <a class="btn" id="reg" href="/views/login.html"><button>Registrate</button></a>
+                <a class="btn" id="log" href="/views/login.html"><button>Inicia Sesión</button></a>
+
+           </ul>            
+        </nav>
+        
+
+    <a onclick="openNav()" class="menu" href="#"><button>Menu</button></a>
+
+       <div id="mobile-menu" class="overlay">
+           <a onclick="closeNav()" href="" class="close">&times;</a>
+          <div class="overlay-content">
+               <a href="/views/index.html">Inicio</a>
+               <a href="/views/aboutUs.html">Nosotros</a>
+               <a href="/views/login.html">Registraste</a>
+               <a href="/views/login.html">Inicia Sesión</a>
+          </div>
+       </div>
+
+    </header>
 
     <section class="body1">
         <h1 class="title">
@@ -146,26 +161,40 @@
             </div>
         </div>
     </section>
-    <footer>
-        <div class="footer-content">
-          <div class="footer-logo">
-            <img src="/public/assets/img/logo.png" width="150px" alt="Logo sitio web">
-          </div>
-          <div class="footer-links">
-            <ul>
-                <a href="#" class="fa fa-facebook"></a>
-                <a href="#" class="fa fa-youtube"></a>
-                <a href="#" class="fa fa-linkedin"></a>
-              
-            </ul>
-          </div>
-          
+    <footer class="footer">
+        <div class="waves">
+          <div class="wave" id="wave1"></div>
+          <div class="wave" id="wave2"></div>
+          <div class="wave" id="wave3"></div>
+          <div class="wave" id="wave4"></div>
         </div>
-        <div class="footer-copyright">
-          <p>&copy; 2024  Patrocinado por: CESDE - Globant.</p>
-        </div>
+        <ul class="social-icon">
+          <li class="social-icon__item"><a class="social-icon__link" href="#">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a></li>
+          <li class="social-icon__item"><a class="social-icon__link" href="#">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a></li>
+          <li class="social-icon__item"><a class="social-icon__link" href="#">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a></li>
+          <li class="social-icon__item"><a class="social-icon__link" href="#">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a></li>
+        </ul>
+        <ul class="menu-footer">
+          <li class="menu__item"><a class="menu__link" href="#">Inicio</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Nosotros</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Registrate</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Inicia sesión</a></li>
+         
+    
+        </ul>
+        <p>&copy;2024 Patrocinados por: Globant - CESDE</p>
       </footer>
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
     </body>
-
+<script src="/public/assets/js/navbar.js"></script>
 </html>

@@ -7,64 +7,156 @@
     font-family: 'Lato', sans-serif;
 }
 
-.navbar {
-  background-color: #020B17;
-  height: 100px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: static;
+.header{
+    background-color: #020B17;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 25px;
+    height: 100px;
+    padding: 10px 10%;
 }
 
-.nav-links a {
-  color: #888888;
-  text-decoration: none;
-  transition: color 0.3s ease; /* Añadido para la transición suave del color */
+
+.header .logo{
+    cursor: pointer;
+    margin-right: auto;
 }
 
-.nav-links li {
-  display: inline-block;
-  margin-right: 25px;
-  font-size: 25px;
+.header .logo img{
+    height: 100px;
+    width: auto;
+    transition: all 0.3s;
 }
 
-.nav-links a:hover {
-  color: #ffffff; /* Cambia el color al pasar el mouse */
+.header .logo img:hover{
+    transform: scale(1.2);
 }
 
-  #register{
-    background-color: #0c3c7e;
-    padding: 12px 20px 12px 20px;
+.header .nav-links{
+    list-style: none;
+}
+
+.header .nav-links li{
+    display: inline-block;
+    padding: 0 20px;     
+}
+
+
+.header .nav-links a{
+    font-size: 700;
+    color: #9c9c9c;
+    transition: 0.5s ease-in-out; 
+}
+
+.header .nav-links a:hover{
     color: #ffffff;
+    opacity: 1;
+}
+
+.menu {
+    display:none;
+}
+
+ .btn button,
+ .menu button{
+    margin-left: 20px;
+    font-size: 25px;
+    padding: 9px 25px;
+    background: #0D3C7E;
+    color: #fdfdfd;
+    border: none;
     border-radius: 10px;
-    
-  }
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
 
-  #login{
-    background-color: #072046;
-    padding: 12px 20px 12px 20px;
-    color: #ffffff;
-    border-radius: 10px;
-  }
+}
 
-  #register,
-  #login {
-    background-color: #0c3c7e; /* Initial background color */
-    padding: 12px 20px 12px 20px;
-    color: #ffffff;
-    border-radius: 10px;
-    display: inline-block; /* Ensure inline behavior */
-    transition: background-color 0.3s ease-in-out; /* Smooth transition */
-  }
+.btn#reg button {
+  background-color: #0D3C7E;
+  color: white;
+}
 
-  #register:hover,
-  #login:hover {
-    background-color: #3a89f5; /* Hover background color */
-    transform: scale(1.1); /* Subtle scale-up effect */
-  }
+.btn#log button {
+  background-color: #072146;
+  color: white;
+}
 
-  .logo{
-    margin-left: 97px;
-  }
+.btn#log button:hover, .btn#reg button:hover,
+  button:hover{
+    background-color: #e2f1f8;
+    color: #000000;
+    transform: scale(1.1);
+}
 
- 
+
+/**/@media screen and (max-width: 964px){
+    .nav-links, .btn {
+        display: none;
+    }
+    .menu {
+        display: inherit;
+    }
+}
+
+
+
+/*Nav Mobile*/
+
+.header a{
+    text-decoration: none;  
+    /*borramos el que teniamos en .header .nav-links a*/ 
+}
+
+.header .overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: rgba(33, 49, 63, .95);
+    overflow: hidden;
+    transition: all 0.3s ease 0s;
+}
+
+.header .overlay .overlay-content{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
+}
+
+.header .overlay a{
+    padding: 15px;
+    font-size: 36px;
+    display: block;
+    transition: all 0.3s ease 0s;
+    font-weight: 700;
+    color: #eceff1;
+}
+
+.header .overlay a:hover, 
+.header .overlay a:focus{
+    color: #000000;
+}
+
+.header .overlay .close{
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 65px;
+}
+
+@media screen and (max-height:450px) {
+    .header .overlay a{
+        font-size: 20px;
+    }
+    .header .overlay .close{
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
